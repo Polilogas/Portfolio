@@ -215,6 +215,7 @@ header .mobile-menu div {
   width: 550px;
   font-size: 24px;
   align-self: center;
+  z-index: 1;
 }
 
 #homepage .main .welcome-message .name {
@@ -517,6 +518,7 @@ header .mobile-menu div {
   line-height: 19px;
   margin-top: 10px;
   color: var(--tertiary-color);
+  z-index: 1;
 }
 
 #skills .skills-container .main  .skills p span {
