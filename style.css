@@ -262,7 +262,7 @@ button {
 }
 
 
-/* If screen width is less than 804px make the asides smaller */
+/* If screen width is less than 804px remove the asides */
 @media screen and (max-width: 804px) {
   #home main {
     width: -webkit-fill-available;
@@ -273,7 +273,7 @@ button {
   }
 
   #home .main-content {
-    min-width: 510px;
+    min-width: max-content;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
