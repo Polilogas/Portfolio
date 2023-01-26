@@ -18,6 +18,15 @@ html, body {
   font-family: "Brawler", Times, serif;  
 }
 
+.left , .right {
+  min-width: 220px;
+  flex-grow: 1;
+}
+
+span {
+  color: var(--primary-color);
+}
+
 /* ~~~~~~~~~~ HEADER ~~~~~~~~~~ */
 
 header {
@@ -30,38 +39,31 @@ header {
   align-items: center;
 }
 
-#logo {
-  width: -webkit-fill-available;
-}
-
 #logo img {
   margin: 0px 46px;
-  width: 145px;
+  width: 130px;
   height: auto;
 }
 
 nav {
   display: flex;
-  justify-content: center;
-  /* align-content: center; */
-  flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
   width: -webkit-fill-available;
-  min-width: fit-content;
 }
 
 nav ul {
   display: flex;
-  flex-direction: row;
-  column-gap: 220px;
+  justify-content: space-around;
+  width: -webkit-fill-available;
   list-style: none;
-  text-decoration: none;
-  font-size: 30px;
+  margin: 0;
+  padding: 0;
+       
 }
 
 nav ul li {
-  align-self: center;
+  font-size: 27px;
 }
 
 nav ul li a {
@@ -70,16 +72,15 @@ nav ul li a {
 }
 
 .contact-button {
-  width: -webkit-fill-available;
   display: flex;
   justify-content: flex-end;
   margin-right: 80px;
 }
 
 button {
-  width: 180px;
+  width: 210px;
   height: 63px;
-  font-size: 30px;
+  font-size: 24px;
   background: rgb(255,236,188);
   background: linear-gradient(90deg, rgba(255,236,188,1) 0%, rgba(255,216,119,1) 100%);
   border-radius: 20px;
@@ -92,13 +93,18 @@ button {
   transform: translate(75px, -95px);
 }
 
+#section-title {
+  align-self: center;
+  font-size: 50px;
+  margin: 85px 0px;
+}
+
 
 /* ~~~~~~~~~~ HOME ~~~~~~~~~~ */
 
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
   height: -webkit-fill-available;
@@ -110,45 +116,45 @@ button {
 
 #home main {
   font-size: 50px;
-  max-width: 1000px;
   display: flex;
-  height: -webkit-fill-available;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
+  height: -webkit-fill-available;
+  align-items: center;
 }
 
-#home main h1 {
-  font-size: 120px;
+#home .main-content {
+  flex-grow: 2;
+}
+
+#home .main-content h1 {
+  font-size: 100px;
+  font-weight: normal;
   color: var(--primary-color);
 }
 
-#home main p {
+#home .main-content p {
   max-width: 870px;
 }
 
-#home main span {
-  color: var(--primary-color);
-}
-
-#home main button {
+#home .main-content button {
   width: fit-content;
   padding: 0px 40px;
   margin-top: 75px;
 }
-
 
 /* ~~~~~~~~~~ ABOUT ~~~~~~~~~~ */
 
 #about {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+#about .main {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  margin-top: 60px
+  align-self: center;
 }
 
 #profile-picture-container {
@@ -198,4 +204,42 @@ button {
   padding: 20px 30px;
   margin-bottom: 40px;
   margin-left: 310px;
+}
+
+
+
+
+
+
+/* If screen width is less than 1500px the size is 40% less */
+@media screen and (max-width: 1500px) {
+  #logo img {
+    width: 87px;
+  }
+  
+  header nav ul li {
+    font-size: 18px;
+  }
+
+  header .contact-button {
+    margin-right: 48px;
+  }
+  
+  header button {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  #home main {
+    font-size: 30px;
+  }
+  
+  #home .main-content h1 {
+    font-size: 75px;
+  }
+
+  #home .main-content p {
+    max-width: 520px;
+  }
 }
