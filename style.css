@@ -7,6 +7,7 @@
   --background-color: #101522;
   --primary-color: #ffd877; 
   --secondary-color: #af8c78;
+  --hover-color: #ffc107;
 }
 
 html, body {
@@ -18,7 +19,7 @@ html, body {
   font-family: "Brawler", Times, serif;  
 }
 
-.left , .right {
+aside {
   min-width: 220px;
   flex-grow: 1;
 }
@@ -52,6 +53,14 @@ nav {
   width: -webkit-fill-available;
 }
 
+nav #active {
+  color: var(--primary-color)
+}
+
+nav #active:hover {
+  color: var(--hover-color);
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -71,6 +80,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
 .contact-button {
   display: flex;
   justify-content: flex-end;
@@ -78,8 +91,8 @@ nav ul li a {
 }
 
 button {
-  width: 210px;
-  height: 63px;
+  width: 180px;
+  height: 50px;
   font-size: 24px;
   background: rgb(255,236,188);
   background: linear-gradient(90deg, rgba(255,236,188,1) 0%, rgba(255,216,119,1) 100%);
@@ -242,4 +255,38 @@ button {
   #home .main-content p {
     max-width: 520px;
   }
+
+  aside {
+    min-width: 132px;
+  }
 }
+
+
+/* If screen width is less than 804px make the asides smaller */
+@media screen and (max-width: 804px) {
+  #home main {
+    width: -webkit-fill-available;
+  }
+
+  aside {
+    display: none;
+  }
+
+  #home .main-content {
+    min-width: 510px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-left: 10%;
+  }
+
+  #home .main-content h1 {
+    font-size: 65px;
+  }
+  
+  #home .main-content p {
+    max-width: 490px;
+  }
+}
+
