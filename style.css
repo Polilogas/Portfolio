@@ -29,6 +29,9 @@ span {
 }
 
 /* ~~~~~~~~~~ HEADER ~~~~~~~~~~ */
+.mobile-header {
+  display: none;
+}
 
 header {
   display: flex;
@@ -278,7 +281,7 @@ button {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start;
-    margin-left: 10%;
+    margin: 0% 10%;
   }
 
   #home .main-content h1 {
@@ -286,7 +289,7 @@ button {
   }
   
   #home .main-content p {
-    max-width: 490px;
+    max-width: 500px;
   }
 }
 
