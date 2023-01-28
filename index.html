@@ -12,7 +12,7 @@
 <body>
   
   <section id="home">
-    <header>
+    <header id="main-header">
       <div id="logo">
         <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
       </div>
@@ -31,6 +31,26 @@
       </svg>
       <p>GR</p>
     </div> -->
+    </header>
+    <header id="mobile-header">
+      <div id="logo">
+        <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
+      </div>
+      <div id="mobile-links">
+        <button onclick="openNav()">
+          <div id="header-button-lines" class="top-line"></div>
+          <div id="header-button-lines" class="middle-line"></div>
+          <div id="header-button-lines" class="bottom-line"></div>
+          <nav id="mobile-link-list">
+            <ul>
+              <li><a href="#home" id="active">HOME</a></li>
+              <li><a href="#about">ABOUT ME</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#skills">SKILLS</a></li>
+            </ul>
+        </nav>
+      </button>
+      </div>      
     </header>
     <main>
       <aside></aside>
@@ -87,5 +107,4 @@ have any questions. I look forward to hearing from you!
   <script src="script.js"></script>
   <script src="translate.js"></script>
 </body>
-
 </html>
