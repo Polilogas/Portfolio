@@ -29,9 +29,6 @@ span {
 }
 
 /* ~~~~~~~~~~ HEADER ~~~~~~~~~~ */
-.mobile-header {
-  display: none;
-}
 
 header {
   display: flex;
@@ -115,6 +112,11 @@ button {
   margin: 85px 0px;
 }
 
+/* ~~~~~~~~~~ MOBILE HEADER ~~~~~~~~~~ */
+
+#mobile-header {
+  display: none;
+}
 
 /* ~~~~~~~~~~ HOME ~~~~~~~~~~ */
 
@@ -227,7 +229,7 @@ button {
 
 
 
-/* If screen width is less than 1500px the size is 40% less */
+/* If screen width is less than 1500px the size of the elements is 40% less */
 @media screen and (max-width: 1500px) {
   #logo img {
     width: 87px;
@@ -265,8 +267,63 @@ button {
 }
 
 
-/* If screen width is less than 804px remove the asides */
+/* iPads, Tablets, Mobile Phones. If screen width is less than 804px remove the asides */
 @media screen and (max-width: 804px) {
+  /* HEADER */
+  #main-header {
+    display: none;
+  }
+
+  #mobile-header {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    background-color: #0a0f1d;;
+    height: 50px;
+    width: -webkit-fill-available;
+  }
+
+  #mobile-header #logo {
+    z-index: 1;
+  }
+  
+  #mobile-header button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: end;
+    justify-content: flex-start;
+    border-radius: 0px;
+    background: none;
+    border: none;
+  }
+  
+  #header-button-lines {
+    width: 30px;
+    border: 1px solid var(--primary-color);
+    margin-top: 5px;
+    margin-right: 15px;
+  }
+  
+  #mobile-links nav {
+    display: none;
+    background-color: rgb(10 15 29);
+  }
+  
+  #mobile-links nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 15px;
+    padding-right: 10px;
+  }
+
+  #mobile-link-list {
+    width: 100vh;
+  }
+  
+  /* HOME */
+  
   #home main {
     width: -webkit-fill-available;
   }
@@ -292,4 +349,3 @@ button {
     max-width: 500px;
   }
 }
-
