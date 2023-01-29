@@ -142,7 +142,11 @@ button {
 }
 
 #home .main-content {
-  flex-grow: 2;
+  min-width: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 #home .main-content h1 {
@@ -283,7 +287,75 @@ button {
   }
 
   #mobile-header #logo {
-    z-index: 1;
+    z-index: 2;
+  }
+
+  #header-button-lines {
+    z-index: 2;
+  }
+
+  /* ANIMATION */
+  .middle-line-animation-start {
+    animation: move-right 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  .top-line-animation-start {
+    animation: rotate-counterclockwise 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  
+  .bottom-line-animation-start {
+    animation: rotate-clockwise 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move-right {  /* This is for the middle line */
+    from {
+      transform: translateX(0) rotate(0deg);
+      width: 30px;
+    }
+    
+    50% {
+      transform: translateX(10px);
+      width: 15px;
+    }
+    
+    to {
+      transform: translateX(10px) rotate(90deg);
+      width: 15px;
+    }
+  }
+
+  @keyframes rotate-counterclockwise { /* This is for the top line */
+    from {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: translateY(7px) rotate(-45deg);
+    }
+  }
+
+  @keyframes rotate-clockwise { /* This is for the bottom line */
+    from {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: translateY(-7px) rotate(45deg);
+    }
   }
   
   /* HOME */
@@ -342,15 +414,6 @@ button {
     justify-content: center;
   }
   
-  #home .main-content {
-    min-width: max-content;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    margin: 0% 10%;
-  }
-
   #home .main-content button {
     width: fit-content;
     padding: 0px 20px;
