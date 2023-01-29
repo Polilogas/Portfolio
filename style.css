@@ -8,6 +8,7 @@
   --primary-color: #ffd877; 
   --secondary-color: #af8c78;
   --hover-color: #ffc107;
+  --mobile-background-color: rgb(10 15 29);
 }
 
 html, body {
@@ -115,6 +116,10 @@ button {
 /* ~~~~~~~~~~ MOBILE HEADER ~~~~~~~~~~ */
 
 #mobile-header {
+  display: none;
+}
+
+#mobile-menu {
   display: none;
 }
 
@@ -291,9 +296,85 @@ button {
   }
 
   #header-button-lines {
+    width: 30px;
+    border: 1px solid var(--primary-color);
+    margin-top: 5px;
+    margin-right: 15px;
     z-index: 2;
   }
 
+  #mobile-header button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: end;
+    justify-content: flex-start;
+    border-radius: 0px;
+    background: none;
+    border: none;
+  }
+
+  #mobile-link-list {
+    width: 100vh;
+  }
+
+  #mobile-menu {
+    z-index: 1;
+    width: 100%;
+    height: -webkit-fill-available;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #mobile-menu-list {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 30px;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobile-menu-list li {
+    list-style: none;
+    position: fixed;
+  }
+
+  #mobile-menu-list li a {
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+  }
+
+  .home {
+    margin-top: -300px;
+  }
+  .about {
+    margin-top: -100px;
+  }
+  .projects {
+    margin-top: 100px;
+  }
+  .skills {
+    margin-top: 300px;
+  }
+  
+  
+  #mobile-menu-background {
+    width: 50px;
+    height: 50px;
+    background-color: var(--mobile-background-color);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    display: none;
+  }
+  
   /* ANIMATION */
   .middle-line-animation-start {
     animation: move-right 1s ease-in-out 1;
@@ -313,6 +394,54 @@ button {
     animation-fill-mode: forwards;
   }
 
+  .logo-animation-start {
+    animation: logo-dissapear 0.8s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  
+  .background-animation-start {
+    animation: background-expand .5s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  .home-link-animation-start {
+    animation: link-popup 0.40s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  .about-link-animation-start {
+    animation: link-popup 0.6s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  .projects-link-animation-start {
+    animation: link-popup 0.8s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  .skills-link-animation-start {
+    animation: link-popup 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes link-popup { /* This is for the menu links */
+    from {
+      transform: translateX(500px);
+    }
+    40% {
+      transform: translateX(500px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+  
   @keyframes move-right {  /* This is for the middle line */
     from {
       transform: translateX(0) rotate(0deg);
@@ -357,6 +486,38 @@ button {
       transform: translateY(-7px) rotate(45deg);
     }
   }
+
+  @keyframes background-expand { /* This is for the background */
+    from {
+      display: none;
+      width: 0px;
+      height: 0px;
+      transform: translateX(0) translateY(0);
+      border-radius: 50%;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+
+    to {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      border-radius: 0%;
+    }
+  }
+
+  @keyframes logo-dissapear {
+    from {
+      width: 87px;
+      transform: rotate(0deg);
+    }
+    
+    to {
+      width: 0px;
+      transform: rotate(250deg);
+    }
+  }
+  
   
   /* HOME */
   #home main {
@@ -369,41 +530,6 @@ button {
 
   #home .main-content h1 {
     font-size: 65px;
-  }
-
-  #mobile-header button {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: end;
-    justify-content: flex-start;
-    border-radius: 0px;
-    background: none;
-    border: none;
-  }
-
-  #header-button-lines {
-    width: 30px;
-    border: 1px solid var(--primary-color);
-    margin-top: 5px;
-    margin-right: 15px;
-  }
-
-  #mobile-links nav {
-    display: none;
-    background-color: rgb(10 15 29);
-  }
-
-  #mobile-links nav ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 15px;
-    padding-right: 10px;
-  }
-
-  #mobile-link-list {
-    width: 100vh;
   }
 
   #home main {

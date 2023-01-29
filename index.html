@@ -34,24 +34,26 @@
     </header>
     <header id="mobile-header">
       <div id="logo">
-        <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
+        <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
       </div>
       <div id="mobile-links">
         <button onclick="openNav()">
           <div id="header-button-lines" class="top-line"></div>
           <div id="header-button-lines" class="middle-line"></div>
           <div id="header-button-lines" class="bottom-line"></div>
-          <nav id="mobile-link-list">
-            <ul>
-              <li><a href="#home" id="active">HOME</a></li>
-              <li><a href="#about">ABOUT ME</a></li>
-              <li><a href="#projects">PROJECTS</a></li>
-              <li><a href="#skills">SKILLS</a></li>
-            </ul>
-        </nav>
-      </button>
+          <nav id="mobile-link-list"></nav>
+        </button>
       </div>      
     </header>
+    <div id="mobile-menu-background"></div>
+    <div id="mobile-menu">
+      <ul id="mobile-menu-list">
+        <li class="home"><a href="#home" id="active">HOME</a></li>
+        <li class="about"><a href="#about">ABOUT ME</a></li>
+        <li class="projects"><a href="#projects">PROJECTS</a></li>
+        <li class="skills"><a href="#skills" >SKILLS</a></li>
+      </ul>
+    </div>
     <main>
       <aside></aside>
       <div class="main-content">
