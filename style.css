@@ -381,9 +381,19 @@ button {
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
+  .middle-line-animation-reverse {
+    animation: move-right-reverse 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
 
   .top-line-animation-start {
     animation: rotate-counterclockwise 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  .top-line-animation-reverse {
+    animation: rotate-counterclockwise-reverse 1s ease-in-out 1;
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
@@ -393,9 +403,19 @@ button {
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
+  .bottom-line-animation-reverse {
+    animation: rotate-clockwise-reverse 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
 
   .logo-animation-start {
     animation: logo-dissapear 0.8s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  .logo-animation-reverse {
+    animation: logo-dissapear-reverse 0.8s ease-in-out 1;
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
@@ -405,9 +425,19 @@ button {
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
+  .background-animation-reverse {
+    animation: background-expand-reverse .5s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
 
   .home-link-animation-start {
     animation: link-popup 0.40s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  .home-link-animation-reverse {
+    animation: link-popup-reverse 1s ease-in-out 1;
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
@@ -417,15 +447,30 @@ button {
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
+  .about-link-animation-reverse {
+    animation: link-popup-reverse 0.8s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
 
   .projects-link-animation-start {
     animation: link-popup 0.8s ease-in-out 1;
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
+  .projects-link-animation-reverse {
+    animation: link-popup-reverse 0.6s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
 
   .skills-link-animation-start {
     animation: link-popup 1s ease-in-out 1;
+    animation-iteration-count: 1; /* animation will only run once */
+    animation-fill-mode: forwards;
+  }
+  .skills-link-animation-reverse {
+    animation: link-popup-reverse 0.4s ease-in-out 1;
     animation-iteration-count: 1; /* animation will only run once */
     animation-fill-mode: forwards;
   }
@@ -441,21 +486,46 @@ button {
       transform: translateX(0px);
     }
   }
+  @keyframes link-popup-reverse { /* This is for the menu links */
+    from {
+      transform: translateX(0px);
+    }
+    60% {
+      transform: translateX(500px);
+    }
+    to {
+      transform: translateX(500px);
+    }
+  }
   
   @keyframes move-right {  /* This is for the middle line */
     from {
       transform: translateX(0) rotate(0deg);
       width: 30px;
     }
-    
     50% {
       transform: translateX(10px);
       width: 15px;
     }
-    
     to {
       transform: translateX(10px) rotate(90deg);
       width: 15px;
+    }
+  }
+
+  @keyframes move-right-reverse {  /* This is for the middle line */
+    from {
+      transform: translateX(10px) rotate(90deg);
+      width: 15px;
+      
+    }
+    50% {
+      transform: translateX(10px);
+      width: 15px;
+    }
+    to {
+      transform: translateX(0) rotate(0deg);
+      width: 30px;
     }
   }
 
@@ -463,13 +533,23 @@ button {
     from {
       transform: rotate(0deg);
     }
-
     50% {
       transform: rotate(0deg);
-    }
-    
+    }    
     to {
       transform: translateY(7px) rotate(-45deg);
+    }
+  }
+
+  @keyframes rotate-counterclockwise-reverse { /* This is for the top line */
+    from {
+      transform: translateY(7px) rotate(-45deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }    
+    to {
+      transform: rotate(0deg);
     }
   }
 
@@ -477,13 +557,23 @@ button {
     from {
       transform: rotate(0deg);
     }
-
     50% {
       transform: rotate(0deg);
-    }
-    
+    }    
     to {
       transform: translateY(-7px) rotate(45deg);
+    }
+  }
+
+  @keyframes rotate-clockwise-reverse { /* This is for the bottom line */
+    from {
+      transform: translateY(-7px) rotate(45deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }    
+    to {
+      transform: rotate(0deg);
     }
   }
 
@@ -497,7 +587,6 @@ button {
       border-top-right-radius: 0px;
       border-top-left-radius: 0px;
     }
-
     to {
       display: flex;
       width: 100%;
@@ -506,15 +595,43 @@ button {
     }
   }
 
+  @keyframes background-expand-reverse { /* This is for the background */
+    from {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      border-radius: 0%;
+    }
+    to {
+      display: none;
+      width: 0px;
+      height: 0px;
+      transform: translateX(0) translateY(0);
+      border-radius: 50%;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+  }
+
   @keyframes logo-dissapear {
     from {
       width: 87px;
       transform: rotate(0deg);
-    }
-    
+    }    
     to {
       width: 0px;
       transform: rotate(250deg);
+    }
+  }
+
+    @keyframes logo-dissapear-reverse {
+    from {
+      width: 0px;
+      transform: rotate(250deg);
+    }    
+    to {
+      width: 87px;
+      transform: rotate(0deg);
     }
   }
   

@@ -16,26 +16,47 @@ function openNav() {
     // Remove class when closing
     mobileLinkList.style.display = "none";
     headerMiddleLine.classList.remove("middle-line-animation-start");
+    headerMiddleLine.classList.add("middle-line-animation-reverse");
     headerTopLine.classList.remove("top-line-animation-start");
+    headerTopLine.classList.add("top-line-animation-reverse");
     headerBottomLine.classList.remove("bottom-line-animation-start");
-    navBackground.style.display = "none";
+    headerBottomLine.classList.add("bottom-line-animation-reverse");
+    navBackground.classList.remove("background-animation-start");
+    navBackground.classList.add("background-animation-reverse");
     logo.classList.remove("logo-animation-start");
-    mobileMenuList.style.display = "none";
+    logo.classList.add("logo-animation-reverse");
+    // mobileMenuList.style.display = "none";
     homeLink.classList.remove("home-link-animation-start");
+    homeLink.classList.add("home-link-animation-reverse");
+    aboutLink.classList.remove("about-link-animation-start");
+    aboutLink.classList.add("about-link-animation-reverse");
+    projectLink.classList.remove("projects-link-animation-start");
+    projectLink.classList.add("projects-link-animation-reverse");
+    skillsLink.classList.remove("skills-link-animation-start");
+    skillsLink.classList.add("skills-link-animation-reverse");
     
   } else {
     // Add class when opening
     mobileLinkList.style.display = "block";
+    headerMiddleLine.classList.remove("middle-line-animation-reverse");
     headerMiddleLine.classList.add("middle-line-animation-start");
+    headerTopLine.classList.remove("top-line-animation-reverse");
     headerTopLine.classList.add("top-line-animation-start");
+    headerBottomLine.classList.remove("bottom-line-animation-reverse");
     headerBottomLine.classList.add("bottom-line-animation-start");
     navBackground.style.display = "flex";
+    navBackground.classList.remove("background-animation-reverse");
     navBackground.classList.add("background-animation-start");
+    logo.classList.remove("logo-animation-reverse");
     logo.classList.add("logo-animation-start");
     mobileMenuList.style.display = "flex";
+    homeLink.classList.remove("home-link-animation-reverse");
     homeLink.classList.add("home-link-animation-start");
+    aboutLink.classList.remove("about-link-animation-reverse");
     aboutLink.classList.add("about-link-animation-start");
+    projectLink.classList.remove("projects-link-animation-reverse");
     projectLink.classList.add("projects-link-animation-start");
+    skillsLink.classList.remove("skills-link-animation-reverse");
     skillsLink.classList.add("skills-link-animation-start");
   }
 }
