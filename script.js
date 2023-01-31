@@ -6,15 +6,15 @@ function openNav() {
   var navBackground = document.getElementById("mobile-menu-background");
   var logo = document.querySelector(".logoPicture");
   var mobileMenuList = document.getElementById("mobile-menu-list");
-  
   var homeLink = document.querySelector(".home");
   var aboutLink = document.querySelector(".about");
   var projectLink = document.querySelector(".projects");
   var skillsLink = document.querySelector(".skills");
   
   if (mobileLinkList.style.display === "block") {
-    // Remove class when closing
+    // Close the menu
     mobileLinkList.style.display = "none";
+    // Remove class when closing
     headerMiddleLine.classList.remove("middle-line-animation-start");
     headerMiddleLine.classList.add("middle-line-animation-reverse");
     headerTopLine.classList.remove("top-line-animation-start");
@@ -36,8 +36,9 @@ function openNav() {
     skillsLink.classList.add("skills-link-animation-reverse");
     
   } else {
-    // Add class when opening
+    // Open the menu
     mobileLinkList.style.display = "block";
+    // Add class when opening
     headerMiddleLine.classList.remove("middle-line-animation-reverse");
     headerMiddleLine.classList.add("middle-line-animation-start");
     headerTopLine.classList.remove("top-line-animation-reverse");
