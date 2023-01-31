@@ -4,7 +4,6 @@ function openNav() {
   var headerTopLine = document.querySelector(".top-line");
   var headerBottomLine = document.querySelector(".bottom-line");
   var navBackground = document.getElementById("mobile-menu-background");
-  var logo = document.querySelector(".logoPicture");
   var mobileMenuList = document.getElementById("mobile-menu-list");
   var homeLink = document.querySelector(".home");
   var aboutLink = document.querySelector(".about");
@@ -23,9 +22,6 @@ function openNav() {
     headerBottomLine.classList.add("bottom-line-animation-reverse");
     navBackground.classList.remove("background-animation-start");
     navBackground.classList.add("background-animation-reverse");
-    logo.classList.remove("logo-animation-start");
-    logo.classList.add("logo-animation-reverse");
-    // mobileMenuList.style.display = "none";
     homeLink.classList.remove("home-link-animation-start");
     homeLink.classList.add("home-link-animation-reverse");
     aboutLink.classList.remove("about-link-animation-start");
@@ -48,8 +44,6 @@ function openNav() {
     navBackground.style.display = "flex";
     navBackground.classList.remove("background-animation-reverse");
     navBackground.classList.add("background-animation-start");
-    logo.classList.remove("logo-animation-reverse");
-    logo.classList.add("logo-animation-start");
     mobileMenuList.style.display = "flex";
     homeLink.classList.remove("home-link-animation-reverse");
     homeLink.classList.add("home-link-animation-start");

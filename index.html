@@ -11,6 +11,7 @@
 
 <body>
   <section id="home">
+    <!-- This is the header for PC monitors -->
     <header id="main-header">
       <div id="logo">
         <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
@@ -25,10 +26,11 @@
       </nav>
       <p class="contact-button"><button>CONTACT</button></p>
     </header>
+    <!-- This is the header for Mobile screens -->
+    <div id="mobile-logo">
+      <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
+    </div>
     <header id="mobile-header">
-      <div id="logo">
-        <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
-      </div>
       <div id="mobile-links">
         <button onclick="openNav()">
           <div id="header-button-lines" class="top-line"></div>
@@ -47,26 +49,34 @@
         <li class="skills" onclick="openNav()"><a href="#skills" >SKILLS</a></li>
       </ul>
     </div>
+    <!-- This is the main content of the home section -->
     <main>
-      <aside></aside>
+      <div id="side-space"></div>
       <div class="main-content">
-        <p>Hi, i'm</p>
-        <h1>Michail Chourdas</h1>
-        <p>I'm currently a <span>Computer Science</span> student at the <span>Hellenic Open University</span>. 
-          <br>I am located in Greece and i spend my day-to-day developing projects.</p>
+        <div><p>WELCOME</p></div>
+        <div><p>My name is:</p></div>
+        <div><h1>Michail Chourdas</h1></div>
+        <div><p>I'm currently a <span>Computer Science</span> student at the <span>Hellenic Open University</span>. 
+          <br>I am located in Greece and i spend my day-to-day developing projects.</p></div>
         <button>PREVIOUS PROJECTS</button>
       </div>
-      <aside></aside>
+      <div id="side-space"></div>
     </main>
   </section>
+  
   <section id="about">
+    <!-- This is the header for PC monitors and Mobile sreens -->
     <header>
       <h2>ABOUT</h2>
     </header>
+    <!-- This is the main content of the about section -->
     <div class="main">
-      <div id="left-space"></div>
-      <main></main>
-      <div id="right-space"></div>
+      <div id="side-space"></div>
+      <main>
+        <div></div>
+        <div></div>
+      </main>
+      <div id="side-space"></div>
     </div>
   </section>
   
