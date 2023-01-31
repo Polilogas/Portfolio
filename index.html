@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  
   <section id="home">
     <header id="main-header">
       <div id="logo">
@@ -25,12 +24,6 @@
         </ul>
       </nav>
       <p class="contact-button"><button>CONTACT</button></p>
-<!--       <div class="translate">
-      <svg xmlns="http://www.w3.org/2000/svg" class="translate-corner" width="125" height="128" viewBox="0 0 125 128">
-        <path xmlns="http://www.w3.org/2000/svg" d="M4.62402 4.5H8.55502C14.1691 37.5249 43.16 100.914 120.5 118.235V123.126C84.8218 119.06 18.2588 90.8329 4.62402 4.5Z" stroke="#252C3E" stroke-width="8"/>
-      </svg>
-      <p>GR</p>
-    </div> -->
     </header>
     <header id="mobile-header">
       <div id="logo">
@@ -48,10 +41,10 @@
     <div id="mobile-menu-background"></div>
     <div id="mobile-menu">
       <ul id="mobile-menu-list">
-        <li class="home"><a href="#home" id="active">HOME</a></li>
-        <li class="about"><a href="#about">ABOUT ME</a></li>
-        <li class="projects"><a href="#projects">PROJECTS</a></li>
-        <li class="skills"><a href="#skills" >SKILLS</a></li>
+        <li class="home" onclick="openNav()"><a href="#home" id="active">HOME</a></li>
+        <li class="about" onclick="openNav()"><a href="#about">ABOUT ME</a></li>
+        <li class="projects" onclick="openNav()"><a href="#projects">PROJECTS</a></li>
+        <li class="skills" onclick="openNav()"><a href="#skills" >SKILLS</a></li>
       </ul>
     </div>
     <main>
@@ -66,44 +59,16 @@
       <aside></aside>
     </main>
   </section>
-  
-<!--   <section id="about">
-    <h2 id="section-title">ABOUT ME</h2>
+  <section id="about">
+    <header>
+      <h2>ABOUT</h2>
+    </header>
     <div class="main">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-      <div id="profile-picture-container">
-      <img id="profile-picture" src="media/profile-picture.jpg" alt="Michail Chourdas Profile Picture">
+      <div id="left-space"></div>
+      <main></main>
+      <div id="right-space"></div>
     </div>
-      <div id="about-me-text-container">
-      <article>
-        <p id="first-paragraph">
-          Hello! My name is Chourdas Michail and I am a Computer Science student at the 
-Hellenic Open University. I am passionate about coding and have been working 
-on personal projects for 2 years. While I don't have professional experience yet, 
-I am constantly seeking opportunities to learn and grow in the field.
-        </p>
-        <p id="second-paragraph">
-          I am a creative and dedicated professional who loves to solve 
-problems and find new ways to improve my skills. I am excited 
-to share my knowledge and experience with others, and I am 
-always looking for new opportunities to collaborate and learn.
-        </p>
-        <p id="third-paragraph">
-          In my free time, I enjoy playing games and watching 
-basketball, and I love to travel and explore new cultures.<br> 
-I am a team player, and I am always willing to go the extra 
-mile to ensure the success of a project.
-        </p>
-        <p id="fourth-paragraph">
-          Please take a look at my portfolio and let me know if you 
-have any questions. I look forward to hearing from you!    
-        </p>
-      </article>
-    </div>
-    </div>
-  </section> -->
+  </section>
   
   <!-- Scripts -->
   <script src="script.js"></script>
