@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Michail Chourdas</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michail Chourdas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <section id="home">
+      <div id="side-space"></div>
+      <div id="home-main-content">
+        <!-- This is the header for PC monitors -->
+        <header id="main-header">
+          <div id="logo">
+            <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home" id="active">HOME</a></li>
+              <li><a href="#about">ABOUT ME</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#skills">SKILLS</a></li>
+            </ul>
+          </nav>
+          <p class="contact-button"><button>CONTACT</button></p>
+        </header>
+        <!-- This is the header for Mobile screens -->
+        <div id="mobile-logo">
+          <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
+        </div>
+        <header id="mobile-header">
+          <div id="mobile-links">
+            <button onclick="openNav()">
+              <div id="header-button-lines" class="top-line"></div>
+              <div id="header-button-lines" class="middle-line"></div>
+              <div id="header-button-lines" class="bottom-line"></div>
+              <nav id="mobile-link-list"></nav>
+            </button>
+          </div>      
+        </header>
+        <div id="mobile-menu-background"></div>
+        <div id="mobile-menu">
+          <ul id="mobile-menu-list">
+            <li class="home" onclick="openNav()"><a href="#home" id="active">HOME</a></li>
+            <li class="about" onclick="openNav()"><a href="#about">ABOUT ME</a></li>
+            <li class="projects" onclick="openNav()"><a href="#projects">PROJECTS</a></li>
+            <li class="skills" onclick="openNav()"><a href="#skills" >SKILLS</a></li>
+          </ul>
+        </div>
+        <!-- This is the main content of the home section -->
+        <main>
+          <div><p>WELCOME</p></div>
+          <div><p>My name is:</p></div>
+          <div><h1>Michail Chourdas</h1></div>
+          <div><p>I'm currently a <span>Computer Science</span> student at the <span>Hellenic Open University</span>. 
+            <br>I am located in Greece and i spend my day-to-day developing projects.</p></div>
+          <button>PREVIOUS PROJECTS</button>
+        </main>
+      </div>
+      <div id="side-space"></div>
+    </section>
+    
+    <section id="about">
+      <div id="side-space"></div>
+      <div id="about-main-content">
+        <!-- This is the header for PC monitors and Mobile sreens -->
+        <header>
+          <h2>ABOUT</h2>
+        </header>
+        <main>
+          <div id="profile-picture-content">
+            <img src="media/profile-picture.jpg" alt="Michail Chourdas Profile Picture">
+            <div></div>
+          </div>
+          <div id="about-text-content">
+            <div id="first-paragraph">
+              <p>Hello! My name is Chourdas Michail and I am a Computer Science student at the Hellenic Open University. I am passionate about coding and have been working on personal projects for 2 years. While I don't have professional experience yet, I am constantly seeking oportunities to learn and grow in the field.</p>
+            </div>
+            <div id="second-paragraph">
+              I am a creative and dedicated professional who loves to solve problems and find new ways to improve my skills. I am excited to share my knowledge and experience with others, and I am always looking for opportunities to collaborate and learn.
+            </div>
+            <div id="third-paragraph">
+              In my free time, I enjoy playing games and watching basketball, and I love to travel and explore new cultures. I am a tam player, and I am always willing to go the extra mile to ensure the success of a project.
+            </div>
+            <div id="fourth-paragraph">
+              Please take a look at my portfolio and let me know if you have any questions. I look forward to hear from you!
+            </div>
+          </div>
+        </main>
+      </div>
+      <div id="side-space"></div>
+    </section>
 
-<body>
-  <section id="home">
-    <!-- This is the header for PC monitors -->
-    <header id="main-header">
-      <div id="logo">
-        <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home" id="active">HOME</a></li>
-          <li><a href="#about">ABOUT ME</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-        </ul>
-      </nav>
-      <p class="contact-button"><button>CONTACT</button></p>
-    </header>
-    <!-- This is the header for Mobile screens -->
-    <div id="mobile-logo">
-      <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
-    </div>
-    <header id="mobile-header">
-      <div id="mobile-links">
-        <button onclick="openNav()">
-          <div id="header-button-lines" class="top-line"></div>
-          <div id="header-button-lines" class="middle-line"></div>
-          <div id="header-button-lines" class="bottom-line"></div>
-          <nav id="mobile-link-list"></nav>
-        </button>
-      </div>      
-    </header>
-    <div id="mobile-menu-background"></div>
-    <div id="mobile-menu">
-      <ul id="mobile-menu-list">
-        <li class="home" onclick="openNav()"><a href="#home" id="active">HOME</a></li>
-        <li class="about" onclick="openNav()"><a href="#about">ABOUT ME</a></li>
-        <li class="projects" onclick="openNav()"><a href="#projects">PROJECTS</a></li>
-        <li class="skills" onclick="openNav()"><a href="#skills" >SKILLS</a></li>
-      </ul>
-    </div>
-    <!-- This is the main content of the home section -->
-    <main>
+    <section id="projects">
       <div id="side-space"></div>
-      <div class="main-content">
-        <div><p>WELCOME</p></div>
-        <div><p>My name is:</p></div>
-        <div><h1>Michail Chourdas</h1></div>
-        <div><p>I'm currently a <span>Computer Science</span> student at the <span>Hellenic Open University</span>. 
-          <br>I am located in Greece and i spend my day-to-day developing projects.</p></div>
-        <button>PREVIOUS PROJECTS</button>
+      <div id="projects-main-content">
+        <header>
+          <h2>PROJECTS</h2>
+        </header>
+        <div class="tab">
+          <button class="tablinks" onclick="openProject(event, 'mobile-app-projects')" id="defaultOpen">Mobile App</button>
+          <button class="tablinks" onclick="openProject(event, 'website-projects')">Website</button>
+          <button class="tablinks" onclick="openProject(event, 'desktop-projects')">Desktop</button>
+          <button class="tablinks" onclick="openProject(event, 'other-projects')">Other Porjects</button>
+        </div>
+          <div id="mobile-app-projects" class="tabcontent">
+            <h3>Mobile App</h3>
+            <p>Mobile App text.</p>
+          </div>
+          <div id="website-projects" class="tabcontent">
+            <h3>Website</h3>
+            <p>Website text</p> 
+          </div>
+          <div id="desktop-projects" class="tabcontent">
+            <h3>Desktop</h3>
+            <p>Desktop text</p>
+          </div>
+          <div id="other-projects" class="tabcontent">
+            <h3>Other Projects</h3>
+            <p>Other Projects text</p>
+          </div>
       </div>
       <div id="side-space"></div>
-    </main>
-  </section>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="translate.js"></script>
+  </body>
   
-  <section id="about">
-    <!-- This is the header for PC monitors and Mobile sreens -->
-    <header>
-      <h2>ABOUT</h2>
-    </header>
-    <!-- This is the main content of the about section -->
-    <div class="main">
-      <div id="side-space"></div>
-      <main>
-        <div></div>
-        <div></div>
-      </main>
-      <div id="side-space"></div>
-    </div>
-  </section>
-  
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script src="translate.js"></script>
-</body>
 </html>
