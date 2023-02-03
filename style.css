@@ -43,9 +43,9 @@ p {
 }
 
 button {
-  width: 170px;
-  height: 45px;
-  font-size: 22px;
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
   background: var(--primary-color);
   border-radius: 20px;
   background-color: transparent;
@@ -96,12 +96,12 @@ nav ul {
   justify-content: space-around;
   width: -webkit-fill-available;
   list-style: none;
-  margin: 0;
+  margin: 0px 100px;
   padding: 0;
        
 }
 nav ul li {
-  font-size: 22px;
+  font-size: 20px;
 }
 nav ul li a {
   color: white;
@@ -203,7 +203,7 @@ nav ul li a:hover {
   flex-direction: row;
 }
 
-#about header, #projects header {
+#about header, #projects header, #skills header {
   justify-content: center;
   color: var(--primary-color);
 }  
@@ -291,6 +291,8 @@ nav ul li a:hover {
 #projects-main-content {
   width: -webkit-fill-available;
   height: 100vh;
+  z-index: 1;
+  box-shadow: 0 9px 0px 0px #1f3037, 0 -9px 0px 0px #1f3037, 12px 0 15px -4px rgb(19 34 40), -12px 0 15px -4px rgb(19 34 40);
 }
 
 .tab {
@@ -332,6 +334,59 @@ nav ul li a:hover {
   border-top: none;
 }
 
+
+/* ~~~~~~~~~~ SKILLS ~~~~~~~~~~ */
+#skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: -webkit-fill-available;
+  height: 100vh;
+}
+
+#skills-main-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: -webkit-fill-available;
+  height: 100vh;
+  z-index: 1;
+  box-shadow: 0 9px 0px 0px #1f3037, 0 -9px 0px 0px #1f3037, 12px 0 15px -4px rgb(19 34 40), -12px 0 15px -4px rgb(19 34 40);
+}
+
+#skills-main-content .main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  height: -webkit-fill-available;
+  align-items: center;
+  max-height: 60%;
+}
+
+#skills-container {
+  height: 100vh;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#html-skill, #css-skill, #javascript-skill, #mysql-skill, #python-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-width: 30%;
+}
+
+#skills-main-content .main img {
+  width: 64px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
 
 
