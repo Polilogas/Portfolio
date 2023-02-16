@@ -11,10 +11,10 @@ window.addEventListener('scroll', function() {
 
   // set the background color of the header based on the scroll position
   if (scrollPosition > 0) {
-    header.style.backgroundColor = '#252525';
+    header.style.backgroundColor = '#101B23';
 	header.style.boxShadow = "0px 1px 5px 0px rgb(0 0 0 / 60%)";
   } else {
-    header.style.backgroundColor = '#2B2C2C';
+    header.style.backgroundColor = '#18222A';
 	header.style.boxShadow = "none";
   }
 });
