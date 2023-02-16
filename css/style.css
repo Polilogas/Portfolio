@@ -1,6 +1,8 @@
 :root {
-	--main-color: #FBD214;
-	--text-color: #b0b0b0;
+	--mainColor: #FBD214;
+	--textColor: #b0b0b0;
+	--backgroundColor1: #2B2C2C;
+	--backgroundColor2: #303131;
 }
 
 * {
@@ -18,43 +20,104 @@ body {
 
 .main-container {
 	width: 1200px;
-	background-color: #2b2c2c;
 	display: flex;
     flex-direction: row;
 	height: 100%;
     align-items: center;
 }
 
+/* ~~~~~~~~~~ HEADER ~~~~~~~~~~ */
 header {
 	display: flex;
-	flex-direction: row;
-	width: -webkit-fill-available;
-	justify-content: center;
-	background-color: #2b2c2c;
-	padding-top: 10px;
+    flex-direction: row;
+    width: -webkit-fill-available;
+    justify-content: center;
+    background-color: var(--backgroundColor1);
+    padding: 10px 0px;
+    position: fixed;
+    z-index: 1;
 }
 
+/* ~~~~~~~~~~ LOGO ~~~~~~~~~~ */
 #logo{
     font-size: 50px;
-	color: var(--main-color);
+	color: var(--mainColor);
 	font-family: "Lato", sans-serif;
 }
 
+/* ~~~~~~~~~~ NAVIGATION BAR ~~~~~~~~~~ */
 #nav-container {
 	width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-iframe {
-	width: -webkit-fill-available;
+nav ul {
+	display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    width: fit-content;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
 }
 
+
+nav li { 
+	list-style: none; /* remove the dots from the list*/
+	padding: 10px 0px;
+}
+
+nav a {
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  color: white;
+  padding: 5px 0px;
+  font-family: "Lato", sans-serif;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FBD214;
+  transition: width 0.25s ease-in-out, transform 0.25s ease-in-out; /* Add a transition for the transform property */
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  width: 50%;
+  transform: scaleX(1);
+}
+
+nav a:not(:hover)::after { /* Add this selector for the border to return to 0 width when the link is not hovered */
+  width: 0;
+}
+
+.underline.active::after {
+	width: 50%;
+	transform: scaleX(1);
+}
+
+
+/* ~~~~~~~~~~ HOME SECTION ~~~~~~~~~~ */
 section#home {
 	display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2B2C2C;
+    background-color: var(--backgroundColor1);
     width: -webkit-fill-available;
-    height: 80vh;
+    height: 85vh;
+}
+
+#home .left-content {
+	width: 500px;
 }
 
 h1 {
@@ -71,9 +134,6 @@ h2 {
 	font-family: "Roboto Condensed", sans-serif;
 }
 
-#home .left-content {
-	width: 500px;
-}
 
 #home .left-content .btn{
 	margin-top: 70px;
@@ -98,8 +158,9 @@ h2 {
     -ms-user-select: none;
 }
 
+/* ~~~~~~~~~~ ABOUT SECTION ~~~~~~~~~~ */
 section#about {
-	background-color: #303131;	
+	background-color: var(--backgroundColor2);	
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +169,7 @@ section#about {
 }
 
 #about .main-container {
-	background-color: #303131;
+	background-color: var(--backgroundColor2);
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -137,7 +198,7 @@ section#about {
 }
 
 #about .left-content div div {
-	border-bottom: 4px solid var(--main-color);
+	border-bottom: 4px solid var(--mainColor);
     width: 70px;
     position: absolute;
     margin-top: 0px;
@@ -150,7 +211,7 @@ section#about {
 
 #about article p {
 	margin-top: 25px;
-	color: var(--text-color);
+	color: var(--textColor);
 	font-family: "Quicksand", sans-serif;
 	font-size: 17px;
 }
@@ -169,6 +230,8 @@ section#projects {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  background-color: var(--backgroundColor1);
+  padding-top: 78px;
 }
 
 #projects .main-container {
@@ -181,6 +244,10 @@ section#projects {
 	text-align: center;
 	font-size: 45px;
 	margin: 40px;
+}
+
+#projects p {
+	color: var(--textColor);
 }
 
 #projects-main-content {
@@ -211,12 +278,12 @@ section#projects {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  color: var(--main-color);
+  color: var(--mainColor);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  color: var(--main-color);
+  color: var(--mainColor);
 }
 
 /* Style the tab content */

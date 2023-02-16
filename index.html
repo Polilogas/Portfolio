@@ -1,177 +1,106 @@
-<!DOCTYPE html>
+<!DOCKTYPE html>
 
-<html lang="en">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Michail Chourdas - Personal Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/button-style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" >
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" >
+	</head>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Michail Chourdas</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body>
-    <section id="home">
-      <div id="side-space"></div>
-      <div id="home-main-content">
-        <!-- This is the header for PC monitors -->
-        <header id="main-header">
-          <div id="logo">
-            <img src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#home" id="active">HOME</a></li>
-              <li><a href="#about">ABOUT ME</a></li>
-              <li><a href="#projects">PROJECTS</a></li>
-              <li><a href="#skills">SKILLS</a></li>
-            </ul>
-          </nav>
-          <p class="contact-button">
-            <button onclick="location.href='#contact'" type="button">CONTACT</button>
-          </p>
-        </header>
-        <!-- This is the header for Mobile screens -->
-        <div id="mobile-logo">
-          <img class="logoPicture" src="media/mc-logo-yellow.svg" alt="Michalis Chourdas Logo">
-        </div>
-        <header id="mobile-header">
-          <div id="mobile-links">
-            <button onclick="openNav()">
-              <div id="header-button-lines" class="top-line"></div>
-              <div id="header-button-lines" class="middle-line"></div>
-              <div id="header-button-lines" class="bottom-line"></div>
-              <nav id="mobile-link-list"></nav>
-            </button>
-          </div>      
-        </header>
-        <div id="mobile-menu-background"></div>
-        <div id="mobile-menu">
-          <ul id="mobile-menu-list">
-            <li class="home" onclick="openNav()"><a href="#home" id="active">HOME</a></li>
-            <li class="about" onclick="openNav()"><a href="#about">ABOUT ME</a></li>
-            <li class="projects" onclick="openNav()"><a href="#projects">PROJECTS</a></li>
-            <li class="skills" onclick="openNav()"><a href="#skills" >SKILLS</a></li>
-          </ul>
-        </div>
-        <!-- This is the main content of the home section -->
-        <main>
-          <div><p>WELCOME</p></div>
-          <div><p>My name is:</p></div>
-          <div><h1>Michail Chourdas</h1></div>
-          <div><p>I'm currently a <span>Computer Science</span> student at the <span>Hellenic Open University</span>. 
-            <br>I am located in Greece and i spend my day-to-day developing projects.</p></div>
-          <button onclick="location.href='#projects'" type="button">PREVIOUS PROJECTS</button>
-        </main>
-      </div>
-      <div id="side-space"></div>
-    </section>
-    
-    <section id="about">
-      <div id="side-space"></div>
-      <div id="about-main-content">
-        <!-- This is the header for PC monitors and Mobile sreens -->
-        <header>
-          <h2>ABOUT</h2>
-        </header>
-        <main>
-          <div id="profile-picture-content">
-            <img src="media/profile-picture.jpg" alt="Michail Chourdas Profile Picture">
-            <div></div>
-          </div>
-          <div id="about-text-content">
-            <div id="first-paragraph">
-              <p>Hello! My name is Chourdas Michail and I am a Computer Science student at the Hellenic Open University. I am passionate about coding and have been working on personal projects for 2 years. While I don't have professional experience yet, I am constantly seeking oportunities to learn and grow in the field.</p>
-            </div>
-            <div id="second-paragraph">
-              I am a creative and dedicated professional who loves to solve problems and find new ways to improve my skills. I am excited to share my knowledge and experience with others, and I am always looking for opportunities to collaborate and learn.
-            </div>
-            <div id="third-paragraph">
-              In my free time, I enjoy playing games and watching basketball, and I love to travel and explore new cultures. I am a tam player, and I am always willing to go the extra mile to ensure the success of a project.
-            </div>
-            <div id="fourth-paragraph">
-              Please take a look at my portfolio and let me know if you have any questions. I look forward to hear from you!
-            </div>
-          </div>
-        </main>
-      </div>
-      <div id="side-space"></div>
-    </section>
-
-    <section id="projects">
-      <div id="side-space"></div>
-      <div id="projects-main-content">
-        <header>
-          <h2>PROJECTS</h2>
-        </header>
-        <div class="tab">
-          <button class="tablinks" onclick="openProject(event, 'mobile-app-projects')" id="defaultOpen">Mobile App</button>
-          <button class="tablinks" onclick="openProject(event, 'website-projects')">Website</button>
-          <button class="tablinks" onclick="openProject(event, 'desktop-projects')">Desktop</button>
-          <button class="tablinks" onclick="openProject(event, 'other-projects')">Other Porjects</button>
-        </div>
-          <div id="mobile-app-projects" class="tabcontent">
-            <h3>Mobile App</h3>
-            <p>Mobile App text.</p>
-          </div>
-          <div id="website-projects" class="tabcontent">
-            <h3>Website</h3>
-            <p>Website text</p> 
-          </div>
-          <div id="desktop-projects" class="tabcontent">
-            <h3>Desktop</h3>
-            <p>Desktop text</p>
-          </div>
-          <div id="other-projects" class="tabcontent">
-            <h3>Other Projects</h3>
-            <p>Other Projects text</p>
-          </div>
-      </div>
-      <div id="side-space"></div>
-    </section>
-
-    <section id="skills">
-      <div id="side-space"></div>
-      <div id="skills-main-content">
-        <header>
-          <h2>SKILLS</h2>
-        </header>
-        <div id="skills-container">
-          <div class="main">
-            <div id="html-skill">
-              <img src="media/html-icon.svg" alt="html icon">
-              <p>HTML</p>
-            </div>
-            <div id="css-skill">
-              <img src="media/css-icon.svg" alt="CSS icon">
-              <p>CSS</p>
-            </div>
-            <div id="javascript-skill">
-              <img src="media/javascript-icon.svg" alt="JavaScript icon">
-              <p>JavaScript</p>
-            </div>
-            <div id="mysql-skill">
-              <img src="media/mysql-icon-only.svg" alt="MySQL icon">
-              <p>MySQL</p>
-            </div>
-            <div id="python-skill">
-              <img src="media/python-icon.svg" alt="Python icon">
-              <p>Python</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="side-space"></div>
-    </section>
-
-    <section id="contact">
-      <div id="side-space"></div>
-      <div id="contact-main-content"></div>
-      <div id="side-space"></div>
-    </section>
-    
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="translate.js"></script>
-  </body>
-  
+	<body>
+		<header>
+			<div class="main-container"> <!-- width: 1200px -->
+				<div id="logo-container">
+					<p id="logo">MC</p>
+				</div>
+				<!-- Include the navigation bar -->
+				<nav id="nav-container">
+					<!-- <iframe id="navigation-iframe" src="navigation.html" frameborder="0" scrolling="no"></iframe> -->
+					<ul>
+						<li><a class="underline active" href="#home">HOME</a></li>
+						<li><a class="underline" href="#about">ABOUT</a></li>
+						<li><a class="underline" href="#projects">PROJECTS</a></li>
+						<li><a class="underline" href="#skills">SKILLS</a></li>
+						<li><a class="underline" href="#contact">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>	
+		
+		<section id="home">
+			<div class="main-container">
+				<div class="left-content">
+					<h1>I'm Michael</h1>
+					<h2>I'm currently a Computer Science student at the Hellenic Open University and i spend my day-to-day developing projects.</h2>
+					<div class="btn">PROJECTS</div>
+				</div>
+				<div class="right-content">
+					<img src="media/profile-picture.png" alt="My Profile Picture">
+				</div>
+			</div>
+		</section>
+		
+		<section id="about">
+			<div class="main-container">
+				<div class="left-content">
+					<img src="media/about-me.jpg" alt="Profile Picture">
+					<div>
+						<p>About Me</p>
+						<div></div>
+					</div>
+				</div>
+				<div class="right-content">
+					<article>
+					<p>Hello! My name is Michael Chourdas and I am a Computer Science student at the Hellenic Open University. I am passionate about coding and have been working on personal projects for 2 years. While I don't have professional experience yet, I am constantly seeking oportunities to learn and grow in the field.</p>
+					<p>I am a creative and dedicated professional who loves to solve problems and find new ways to improve my skills. I am excited to share my knowledge and experience with others, and I am always looking for opportunities to collaborate and learn.</p>
+					<p>In my free time, I enjoy playing games and watching basketball, and I love to travel and explore new cultures. I am a tam player, and I am always willing to go the extra mile to ensure the success of a project.</p>
+					<p>Please take a look at my portfolio and let me know if you have any questions. I look forward to hear from you!</p>
+					</article>
+					<div>
+						<div class="btn">PROJECTS</div>
+						<div class="btn">DOWNLOAD CV</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="projects">
+			<div class="main-container">
+				<h2>PROJECTS</h2>
+				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus</p>
+				<div id="projects-main-content">
+					<div class="tab">
+						<button class="tablinks" onclick="openProject(event, 'mobile-app-projects')" id="defaultOpen">Mobile App</button>
+						<button class="tablinks" onclick="openProject(event, 'website-projects')">Website</button>
+						<button class="tablinks" onclick="openProject(event, 'desktop-projects')">Desktop</button>
+						<button class="tablinks" onclick="openProject(event, 'other-projects')">Other Porjects</button>
+					</div>
+					<div id="mobile-app-projects" class="tabcontent active">
+						<h3>Mobile App</h3>
+						<p>Mobile App text.</p>
+					</div>
+					<div id="website-projects" class="tabcontent">
+						<h3>Website</h3>
+						<p>Website text</p> 
+					</div>
+					<div id="desktop-projects" class="tabcontent">
+						<h3>Desktop</h3>
+						<p>Desktop text</p>
+					</div>
+					<div id="other-projects" class="tabcontent">
+						<h3>Other Projects</h3>
+						<p>Other Projects text</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script src="javascript/script.js"></script>
+	</body>
 </html>
