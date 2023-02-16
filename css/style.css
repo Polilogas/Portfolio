@@ -269,7 +269,7 @@ section#about {
 
 section#projects {
   width: -webkit-fill-available;
-  height: 100vh;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -334,4 +334,29 @@ section#projects {
   display: none;
   padding: 6px 12px;
   border-top: none;
+}
+
+#mobile-app-projects, #website-projects, #desktop-projects, #other-projects {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 20px 100px 0px 100px;
+}
+
+#projects #finished-project .picture {
+	width: fit-content;
+	padding: 15px;
+}
+
+#projects #finished-project .picture img {
+	width: 250px;
+	height: 200px;
+	object-fit: cover;
+}
+
+#projects #finished-project .description {
+	width: 250px;
+	margin-top: 20px;
+	padding: 0px 0px 0px 15px;
 }
