@@ -1,0 +1,227 @@
+:root {
+	--main-color: #FBD214;
+	--text-color: #b0b0b0;
+}
+
+* {
+	margin: 0px;
+    padding: 0px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.main-container {
+	width: 1200px;
+	background-color: #2b2c2c;
+	display: flex;
+    flex-direction: row;
+	height: 100%;
+    align-items: center;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	width: -webkit-fill-available;
+	justify-content: center;
+	background-color: #2b2c2c;
+	padding-top: 10px;
+}
+
+#logo{
+    font-size: 50px;
+	color: var(--main-color);
+	font-family: "Lato", sans-serif;
+}
+
+#nav-container {
+	width: -webkit-fill-available;
+}
+
+iframe {
+	width: -webkit-fill-available;
+}
+
+section#home {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2B2C2C;
+    width: -webkit-fill-available;
+    height: 80vh;
+}
+
+h1 {
+	color: white;
+	font-size: 70px;
+	font-family: "Palanquin", sans-serif;
+}
+
+h2 {
+	color: #CCCCCC;
+	font-size: 23px;
+	margin-top: 10px;
+	width: 350px;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+#home .left-content {
+	width: 500px;
+}
+
+#home .left-content .btn{
+	margin-top: 70px;
+}
+
+#home .right-content {
+	width: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+
+#home .right-content img {
+	height: 550px;
+	width: auto;
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+section#about {
+	background-color: #303131;	
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+    height: 80vh;
+}
+
+#about .main-container {
+	background-color: #303131;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#about .left-content img {
+	width: 300px;
+    mix-blend-mode: lighten;
+    filter: grayscale(1);
+	opacity: 0.15;
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#about .left-content div {
+	position: absolute;
+    font-size: 40px;
+    color: #CCCCCC;
+    margin-top: -200px;
+    margin-left: 220px;
+}
+
+#about .left-content div div {
+	border-bottom: 4px solid var(--main-color);
+    width: 70px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#about article {
+	width: 600px;
+}
+
+#about article p {
+	margin-top: 25px;
+	color: var(--text-color);
+	font-family: "Quicksand", sans-serif;
+	font-size: 17px;
+}
+
+
+#about .right-content div div{
+	margin: 40px 40px 0px 0px;
+}
+
+
+/* ~~~~~~~~~~ PROJECTS ~~~~~~~~~~ */
+
+section#projects {
+  width: -webkit-fill-available;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#projects .main-container {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: -webkit-fill-available;
+}
+#projects h2 {
+	text-align: center;
+	font-size: 45px;
+	margin: 40px;
+}
+
+#projects-main-content {
+  width: 1200px;
+  margin-top: 50px;
+}
+
+.tab {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #CCCCCC;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: var(--main-color);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: var(--main-color);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
