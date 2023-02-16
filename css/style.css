@@ -39,10 +39,14 @@ header {
 }
 
 /* ~~~~~~~~~~ LOGO ~~~~~~~~~~ */
-#logo{
-    font-size: 50px;
-	color: var(--mainColor);
-	font-family: "Lato", sans-serif;
+#logo-container img {
+    width: 80px;
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /* ~~~~~~~~~~ NAVIGATION BAR ~~~~~~~~~~ */
@@ -63,6 +67,12 @@ nav ul {
     align-items: center;
 }
 
+nav ul div {
+	width: 57px;
+	height: 1px;
+	background-color: var(--textColor);
+	margin: 0px -30px;
+}
 
 nav li { 
 	list-style: none; /* remove the dots from the list*/
@@ -118,6 +128,18 @@ section#home {
 
 #home .left-content {
 	width: 500px;
+    border-bottom: 1px solid #ffffff90;
+    padding-bottom: 37px;
+	padding-left: 20px;
+}
+
+#home .left-content .left-border {
+	background-color: #ffffff90;
+    height: 400px;
+    width: 1px;
+    position: absolute;
+    margin-left: -34px;
+    transform: skew(4deg);
 }
 
 h1 {
@@ -205,10 +227,6 @@ section#about {
     margin-left: 0px;
 }
 
-#about article {
-	width: 600px;
-}
-
 #about article p {
 	margin-top: 25px;
 	color: var(--textColor);
@@ -216,6 +234,31 @@ section#about {
 	font-size: 17px;
 }
 
+#about .right-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+#about .right-content .top-border {
+	width: 274px;
+    height: 1px;
+    background-color: #ffffff59;
+    align-self: self-end;
+}
+
+#about .right-content .right-border {
+	width: 1px;
+    height: 248px;
+    background-color: #ffffff59;
+    align-self: self-end;
+	position: absolute;
+}
+
+#about .right-content article {
+	width: 600px;
+    margin: 30px 50px 0px 0px;
+}
 
 #about .right-content div div{
 	margin: 40px 40px 0px 0px;
