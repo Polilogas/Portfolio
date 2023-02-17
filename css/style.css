@@ -273,6 +273,7 @@ section#projects {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
   background-color: var(--backgroundColor1);
   padding-top: 78px;
 }
@@ -281,7 +282,6 @@ section#projects {
 	display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: -webkit-fill-available;
 }
 #projects h2 {
 	text-align: center;
@@ -291,6 +291,10 @@ section#projects {
 
 #projects p {
 	color: var(--textColor);
+}
+
+#projects .about-projects {
+	width: 60%;
 }
 
 #projects-main-content {
