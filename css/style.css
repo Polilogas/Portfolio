@@ -531,3 +531,8 @@ section#contact {
 #form .fourth-row.rows.btn {
     margin-top: 10px;
 }
+
+#form textarea {
+	resize: none;
+	width: 366px;
+}
