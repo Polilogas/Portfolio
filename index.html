@@ -155,7 +155,7 @@
 				</div>
 				<div cless="right-content">
 					<div id="form">
-					  <form action="https://formsubmit.co/b815d4dc2e871d125e705f75dd73dd5a" target="_self" method="POST">
+					  <form action="https://formsubmit.co/b815d4dc2e871d125e705f75dd73dd5a" method="POST">
 						
 						<p>Send Message</p>
 						
@@ -188,7 +188,7 @@
 						  <div class="column">
 							<input type="hidden" value="" name="url">
 							<input type="hidden" name="token" id="recaptchaToken">
-							<button type="submit" id="submit-btn">Send</button>
+							<button type="button" onclick="submitForm()">Send</button>
 						  </div>
 						</div>
 
@@ -204,17 +204,11 @@
 			document.getElementById("recaptchaToken").value = token;
 			document.getElementById("form").submit();
 		  }
-
-		  grecaptcha.ready(function() {
-			grecaptcha.execute();
-		  });
-
-		  document.getElementById("form").addEventListener("submit", function(event) {
-			event.preventDefault();
+		  function submitForm() {
 			grecaptcha.execute('6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN', {action: 'submit'}).then(function(token) {
 			  onSubmit(token);
 			});
-		  });
+		  }
 		</script>
 	</body>
 </html>
