@@ -154,6 +154,7 @@ h2 {
 	margin-top: 10px;
 	width: 350px;
 	font-family: "Roboto Condensed", sans-serif;
+	letter-spacing: 2px;
 }
 
 
@@ -431,4 +432,102 @@ section#skills {
     row-gap: 20px;
     justify-content: center;
     width: 300px;
+}
+
+
+
+/* ~~~~~~~~~~ CONTACT ~~~~~~~~~~ */
+
+section#contact {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--backgroundColor1);
+	width: -webkit-fill-available;
+	justify-content: center;
+	height: 80vh;
+}
+
+#contact .main-container {
+	justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contact .left-content {
+	color: var(--textColor);
+	width: 300px;
+}
+
+#contact .left-content h3 {
+	color: #CCCCCC;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+#contact .left-content p {
+    font-size: 17px;
+}
+
+#form label {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+#form input {
+  height: 30px;
+}
+
+#form {
+	display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    background-color: #101b23;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    box-shadow: inset 0px 0px 10px 4px #0d151b;
+}
+
+#form p {
+    text-align: center;
+    font-size: 32px;
+}
+
+#form .rows {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: -webkit-fill-available;
+}
+
+#form .column {
+  display: inline-grid;
+  justify-items: start;
+}
+
+#form .second-row.rows .column {
+  width: -webkit-fill-available;
+}
+
+#form .second-row.rows input {
+  width: -webkit-fill-available;
+}
+
+#form .fourth-row.rows .column {
+  width: 100%;
+}
+
+#form .fourth-row.rows button {
+  width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  background-color: #343a40;
+  color: white;
+  border: 0px;
+}
+
+#form .fourth-row.rows.btn {
+    margin-top: 10px;
 }
