@@ -211,6 +211,10 @@ section#about {
     -ms-user-select: none;
 }
 
+#about .left-content h2 {
+	font-size: 40px;
+}
+
 #about .left-content div {
 	position: absolute;
     font-size: 40px;
@@ -363,4 +367,68 @@ section#projects {
 	width: 250px;
 	margin-top: 20px;
 	padding: 0px 0px 0px 15px;
+}
+
+
+/* ~~~~~~~~~~ SKILLS ~~~~~~~~~~ */
+
+section#skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: var(--backgroundColor2);
+	color: var(--textColor);
+	width: -webkit-fill-available;
+	height: 50vh;
+}
+
+#skills .main-container {
+	justify-content: center;
+}
+
+#skills .left-content {
+    margin-right: 150px;
+}
+
+#skills .left-content div div {
+	border-bottom: 4px solid var(--mainColor);
+    width: 45px;
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 74px;
+}
+
+
+#skills .left-content h2 {
+	font-size: 45px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 70px;
+}
+
+#skills .left-content img {
+	width: 160px;
+    mix-blend-mode: lighten;
+    filter: grayscale(1);
+    opacity: 0.15;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#skills .right-content img {
+	width: 60px;
+}
+
+#skills .right-content .skill-icons {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+    width: 300px;
 }
