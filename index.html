@@ -186,7 +186,7 @@
 					<div class="fourth-row rows">
 					  <div class="column">
 						<input type="hidden" value="" name="url">
-						<button type="submit" class="g-recaptcha" data-sitekey="6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN" data-callback='onSubmit' data-action='submit'>Send</button>						
+						<button type="submit" id="submit" class="g-recaptcha" data-sitekey="6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN" data-callback='onSubmit' data-action='submit'>Send</button>						
 					  </div>
 					</div>
 
@@ -200,7 +200,7 @@
 		<script src="https://www.google.com/recaptcha/api.js"></script>
 		<script>
 		   function onSubmit(token) {
-			 document.getElementById("demo-form").submit();
+			 document.getElementById("submit").submit();
 		   }
 		</script>
  
