@@ -526,6 +526,13 @@ section#contact {
   background-color: #343a40;
   color: white;
   border: 0px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+#form .fourth-row.rows button:hover {
+    background-color: #eec815;
+    color: black;
 }
 
 #form .fourth-row.rows.btn {
