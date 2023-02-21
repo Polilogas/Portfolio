@@ -1,8 +1,8 @@
 :root {
-	--emphasize-color: #FBD214;
+	--buttonColor: #FBD214;
 }
 
-* {
+.btn {
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-timing-function: cubic-bezier(100,50,21,6);
@@ -35,7 +35,7 @@ body {
 }
 .btn svg rect {
 	fill: none;
-	stroke: var(--emphasize-color);
+	stroke: var(--buttonColor);
 	stroke-width: 1;
 	stroke-dasharray: 422, 0;
 	transition: all 0.35s linear; /* The speed on hover out*/
@@ -49,7 +49,7 @@ body {
 }
 
 .btn:hover {
-	color: var(--emphasize-color);
+	color: var(--buttonColor);
 	font-size:20px;
 	letter-spacing:1px;
 	font-weight:bold;
