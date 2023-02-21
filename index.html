@@ -201,8 +201,9 @@
 		<script src="javascript/script.js"></script>
 		<script>
 		  function onSubmit(token) {
+			alert("onSubmit")
 			document.getElementById("recaptchaToken").value = token;
-			document.getElementById("form").submit();
+			document.getElementById("form").submit;
 		  }
 		  function submitForm() {
 			grecaptcha.execute('6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN', {action: 'submit'}).then(function(token) {
