@@ -188,7 +188,7 @@
 						  <div class="column">
 							<input type="hidden" value="" name="url">
 							<input type="hidden" name="token" id="recaptchaToken">
-							<button type="submit">Send</button>
+							<button type="submit" id="submit-btn">Send</button>
 						  </div>
 						</div>
 
@@ -200,16 +200,16 @@
 		
 		<script src="javascript/script.js"></script>
 		<script>
-			function onSubmit(token) {
-			  document.getElementById("recaptchaToken").value = token;
-			  document.getElementById("form").submit();
-			}
-			
+			grecaptcha.ready(function() {
+				grecaptcha.execute('6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN', {action: 'submit'}).then(function(token) {
+					document.getElementById("recaptchaToken").value = token;
+					document.getElementById("submit-btn").disabled = false;
+				});
+			});
+
 			document.getElementById("form").addEventListener("submit", function(event) {
-			  event.preventDefault();
-			  grecaptcha.execute('6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN', {action: 'submit'}).then(function(token) {
-				onSubmit(token);
-			  });
+				event.preventDefault();
+				document.getElementById("form").submit();
 			});
 		</script>
 	</body>
