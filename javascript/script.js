@@ -123,8 +123,5 @@ function onSubmit() {
 	  
 	}, 5000);
 
-
-
 	/*window.location.href = "#home";*/
-	return false; // prevent the form from submitting normally
 }
