@@ -102,6 +102,7 @@ function openProject(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 
+ myButton.addEventListener("click", onSubmit);
 
 /* ~~~~~~~~~~ FORM ~~~~~~~~~~ */
 function onSubmit() {
