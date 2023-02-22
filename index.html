@@ -11,7 +11,13 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" >
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500&display=swap">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" >
-		<script src="https://www.google.com/recaptcha/api.js?render=6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN"></script>
+		<script type="text/javascript">
+		  var onloadCallback = function() {
+			grecaptcha.render('html_element', {
+			  'sitekey' : '6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN'
+			});
+		  };
+		</script>
 	</head>
 
 	<body>
@@ -187,8 +193,8 @@
 						<div class="fourth-row rows">
 						  <div class="column">
 							<input type="hidden" value="" name="url">
-							<input type="hidden" name="token" id="recaptchaToken">
-							<button type="button" onclick="submitForm()">Send</button>
+							<button type="submit">Send</button>
+							<div id="html_element"></div
 						  </div>
 						</div>
 
@@ -199,17 +205,6 @@
 		</section>
 		
 		<script src="javascript/script.js"></script>
-		<script>
-		  function onSubmit(token) {
-			alert("onSubmit")
-			document.getElementById("recaptchaToken").value = token;
-			document.getElementById("form").submit;
-		  }
-		  function submitForm() {
-			grecaptcha.execute('6LdiiJ4kAAAAANQ8B3sxSz5dm9rOOHfK1wpop9zN', {action: 'submit'}).then(function(token) {
-			  onSubmit(token);
-			});
-		  }
-		</script>
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 	</body>
 </html>
