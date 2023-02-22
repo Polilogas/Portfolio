@@ -100,3 +100,30 @@ function openProject(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on to open the tab on page load
 document.getElementById("defaultOpen").click();
+
+
+
+/* ~~~~~~~~~~ FORM ~~~~~~~~~~ */
+function onSubmit() {
+	// your JavaScript code here
+	document.querySelector(".submited-text").style.display = "flex";
+	document.querySelector(".submited-text").classList.add("fadeIn");
+
+	// After 5 seconds, remove the fadeIn class to start the fade out animation
+	setTimeout(() => {
+	  document.querySelector(".submited-text").classList.remove('fadeIn');
+	  document.querySelector(".submited-text").classList.add("fadeOut");
+	  document.getElementById("contact-form").reset();
+	  
+	  setTimeout(() => {
+		document.querySelector(".submited-text").style.display = "none";
+		document.querySelector(".submited-text").classList.remove('fadeOut');
+		}, 1000);
+	  
+	}, 5000);
+
+
+
+	/*window.location.href = "#home";*/
+	return false; // prevent the form from submitting normally
+}
