@@ -105,40 +105,42 @@ document.getElementById("defaultOpen").click();
 const sendButton = document.getElementById('sendButton');
 sendButton.addEventListener('click', onSubmit);
 
+
+
 /* ~~~~~~~~~~ FORM ~~~~~~~~~~ */
 function onSubmit() {
+	// when the submit button is pressed
 	const fullName = document.getElementById('full-name').value.trim();
 	const email = document.getElementById('email').value.trim();
 	const message = document.getElementById('message').value.trim();
 	
-	// your JavaScript code here
-	if (fullName === '' || email === '' || message === '' ) {
-		
-	}
+	if (fullName === '' || email === '' || message === '' ) {}
 	else {
-	document.querySelector(".submited-text").style.display = "flex";
-	document.querySelector(".submited-text").classList.add("fadeIn");
+		document.querySelector(".submited-text").style.display = "flex";
+		document.querySelector(".submited-text").classList.add("fadeIn");
 
-	// After 5 seconds, remove the fadeIn class to start the fade out animation
-	setTimeout(() => {
-	  document.querySelector(".submited-text").classList.remove('fadeIn');
-	  document.querySelector(".submited-text").classList.add("fadeOut");
-	  document.getElementById("contact-form").reset();
-	  
-	  setTimeout(() => {
-		document.querySelector(".submited-text").style.display = "none";
-		document.querySelector(".submited-text").classList.remove('fadeOut');
-		}, 1000);
-	  
-	}, 5000);
+		// After 5 seconds, remove the fadeIn class to start the fade out animation
+		setTimeout(() => {
+		  document.querySelector(".submited-text").classList.remove('fadeIn');
+		  document.querySelector(".submited-text").classList.add("fadeOut");
+		  document.getElementById("contact-form").reset();
+		  
+		  setTimeout(() => {
+			document.querySelector(".submited-text").style.display = "none";
+			document.querySelector(".submited-text").classList.remove('fadeOut');
+			}, 1000);
+		  
+		}, 5000);
 
-	window.location.href = "#contact";
+		window.location.href = "#contact";
 	}
 }
 
+/*
 document.getElementById("contact-form").addEventListener("submit", function(event) {
   // Prevent default form submission behavior
   event.preventDefault();
 
   // Add your custom form submission code here
 });
+*/
