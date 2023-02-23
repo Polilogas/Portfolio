@@ -81,6 +81,10 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 
+
+
+
+
 /* ~~~~~~~~~~ TABS ~~~~~~~~~~ */
 
 // This is for the tabs in projects section
@@ -102,12 +106,16 @@ function openProject(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 
-const sendButton = document.getElementById('sendButton');
-sendButton.addEventListener('click', onSubmit);
+
+
+
 
 
 
 /* ~~~~~~~~~~ FORM ~~~~~~~~~~ */
+const sendButton = document.getElementById('sendButton');
+sendButton.addEventListener('click', onSubmit);
+
 function onSubmit() {
 	// when the submit button is pressed
 	const fullName = document.getElementById('full-name').value.trim();
