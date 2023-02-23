@@ -107,7 +107,15 @@ sendButton.addEventListener('click', onSubmit);
 
 /* ~~~~~~~~~~ FORM ~~~~~~~~~~ */
 function onSubmit() {
+	const fullName = document.getElementById('full-name').value.trim();
+	const email = document.getElementById('email').value.trim();
+	const message = document.getElementById('message').value.trim();
+	
 	// your JavaScript code here
+	if (fullName === '' || email === '' || message === '' ) {
+		
+	}
+	else {
 	document.querySelector(".submited-text").style.display = "flex";
 	document.querySelector(".submited-text").classList.add("fadeIn");
 
@@ -124,5 +132,13 @@ function onSubmit() {
 	  
 	}, 5000);
 
-	/*window.location.href = "#home";*/
+	window.location.href = "#contact";
+	}
 }
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  // Prevent default form submission behavior
+  event.preventDefault();
+
+  // Add your custom form submission code here
+});
