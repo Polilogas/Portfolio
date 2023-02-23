@@ -118,6 +118,7 @@ function onSubmit() {
 	else {
 		document.querySelector(".submited-text").style.display = "flex";
 		document.querySelector(".submited-text").classList.add("fadeIn");
+		document.querySelector("#sendButton").disabled = true;
 
 		// After 5 seconds, remove the fadeIn class to start the fade out animation
 		setTimeout(() => {
@@ -128,6 +129,7 @@ function onSubmit() {
 		  setTimeout(() => {
 			document.querySelector(".submited-text").style.display = "none";
 			document.querySelector(".submited-text").classList.remove('fadeOut');
+			document.querySelector("#sendButton").disabled = false;
 			}, 1000);
 		  
 		}, 5000);
@@ -144,3 +146,4 @@ document.getElementById("contact-form").addEventListener("submit", function(even
   // Add your custom form submission code here
 });
 */
+
