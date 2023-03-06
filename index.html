@@ -2,7 +2,7 @@
 
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Michail Chourdas - Personal Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -43,7 +43,7 @@
 			<div class="main-container">
 				<div class="left-content">
 					<div class="left-border"></div>
-					<h1>I'm Michael</h1>
+					<h1>I'm Michail</h1>
 					<h2>I'm currently a Computer Science student at the Hellenic Open University and i spend my day-to-day developing projects.</h2>
 					<a href="#projects"><div class="btn">PROJECTS</div></a>
 				</div>
@@ -66,10 +66,14 @@
 					<div class="top-border"></div>
 					<div class="right-border"></div>
 					<article>
-					<p>Hello! My name is Michael Chourdas and I am a Computer Science student at the Hellenic Open University. I am passionate about coding and have been working on personal projects for 2 years. While I don't have professional experience yet, I am constantly seeking oportunities to learn and grow in the field.</p>
-					<p>I am a creative and dedicated professional who loves to solve problems and find new ways to improve my skills. I am excited to share my knowledge and experience with others, and I am always looking for opportunities to collaborate and learn.</p>
-					<p>In my free time, I enjoy playing games and watching basketball, and I love to travel and explore new cultures. I am a tam player, and I am always willing to go the extra mile to ensure the success of a project.</p>
-					<p>Please take a look at my portfolio and let me know if you have any questions. I look forward to hear from you!</p>
+						<div>
+							<h2>About Me</h2>
+							<div></div>
+						</div>
+						<p>Hello! My name is Michail Chourdas and I am a Computer Science student at the Hellenic Open University. I am passionate about coding and have been working on personal projects for 2 years. While I don't have professional experience yet, I am constantly seeking oportunities to learn and grow in the field.</p>
+						<p>I am a creative and dedicated professional who loves to solve problems and find new ways to improve my skills. I am excited to share my knowledge and experience with others, and I am always looking for opportunities to collaborate and learn.</p>
+						<p>In my free time, I enjoy playing games and watching basketball, and I love to travel and explore new cultures. I am a tam player, and I am always willing to go the extra mile to ensure the success of a project.</p>
+						<p>Please take a look at my portfolio and let me know if you have any questions. I look forward to hear from you!</p>
 					</article>
 					<div>
 						<a href="#projects"><div class="btn">PROJECTS</div></a>
@@ -86,10 +90,10 @@
 				<p class="about-projects">I'm always looking for ways to improve my skills and techniques, so any feedback or suggestions you may have are welcome. I hope you find my projects interesting and inspiring, and I look forward to hearing your thoughts!</p>
 				<div id="projects-main-content">
 					<div class="tab">
-						<button class="tablinks" onclick="openProject(event, 'mobile-app-projects')" id="defaultOpen">Mobile App</button>
-						<button class="tablinks" onclick="openProject(event, 'website-projects')">Website</button>
-						<button class="tablinks" onclick="openProject(event, 'desktop-projects')">Desktop</button>
-						<button class="tablinks" onclick="openProject(event, 'other-projects')">Other Porjects</button>
+						<button class="tablinks" onclick="openProject(event, 'mobile-app-projects')" type="button" id="defaultOpen">Mobile App</button>
+						<button class="tablinks" onclick="openProject(event, 'website-projects')" type="button"> Website</button>
+						<button class="tablinks" onclick="openProject(event, 'desktop-projects')" type="button">Desktop</button>
+						<button class="tablinks" onclick="openProject(event, 'other-projects')" type="button">Other Porjects</button>
 					</div>
 					<div id="mobile-app-projects" class="tabcontent active">
 					
@@ -117,8 +121,15 @@
 						<p>Website text</p> 
 					</div>
 					<div id="desktop-projects" class="tabcontent">
-						<h3>Desktop</h3>
-						<p>Desktop text</p>
+						
+						<div class="finished-project">
+							<div class="picture">
+								<a href="https://github.com/Polilogas/windows-calculator" alt="Calculator" target="_blank"> <img src="media/project-demo.jpg" alt="Calculator"></a>
+							</div>
+							<div class="description">
+								<p>awesome project description</p>
+							</div>
+						</div>
 					</div>
 					<div id="other-projects" class="tabcontent">
 						<h3>Other Projects</h3>
@@ -199,6 +210,62 @@
 						</form>
 					</div>
 				</div>
+			</div>
+		</section>
+		
+		<section id="footer">
+			<div class="footer-top">
+				<div class="footer-cv">
+					<h4>CV</h4>
+					<a href="documents/CV - ΧΟΥΡΔΑΣ ΜΙΧΑΗΛ.pdf" alt="CV" target="_blank">Download CV</a>
+				</div>
+				
+				<div class="footer-contact-info">
+					<h4>Contact me</h4>
+						<p>Tel: (+30) 694-0783-893</p>
+						<a href="mailto:m.chourdas@outlook.com">m.chourdas@outlook.com</a>
+				</div>
+				
+				<div class="footer-social-media">
+					<h4>Social Media</h4>
+					
+					<a href="#" alt="Facebook" target="_blank">
+						<img src="media/facebook.png" alt="Facebook" title="Facebook" id="facebook">
+					</a>
+					
+					<a href="#" alt="Linkedin" target="_blank">
+						<img src="media/linkedin.png" alt="Linkedin" title="Linkedin" id="linkedin">
+					</a>
+					
+					<a href="#" alt="Github" target="_blank">
+						<img src="media/github.png" alt="Github" title="Github" id="github">
+					</a>
+					
+					<a href="#" alt="Youtube" target="_blank">
+						<img src="media/youtube.png" alt="Youtube" title="Youtube" id="youtube">
+					</a>
+				</div>
+				<div class="footer-insirations">
+					<h4>Inspiration</h4>
+					<a href="http://preview.droitthemes.net/wp/mak/home-three-dark/" alt="droitthemes" target="_blank">droitthemes</a>
+					
+					<h4>Attributions</h4>
+					<p>For the social media icon pack:</p>
+					<a href="https://www.freepik.com" alt="Freepik" target="_blank">flaticon | Freepik</a>
+					<p>For the skills icons:</p>
+					<a href="https://icons8.com/icons/set/html" alt="icons8" target="_blank">icons8</a>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+			
+				<div class="footer-copyrights">
+					<ul>
+						<li class="copyrights-main">COPYRIGHTS © ALL RIGHTS RESERVED</li>
+						<li class="copyrights-extra">This material may not be reproduced or distributed, in whole or in part, without written permission from the author.</li>
+					</ul>
+				</div>
+
 			</div>
 		</section>
 		
