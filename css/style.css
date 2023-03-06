@@ -679,9 +679,11 @@ section#footer ul {
 .footer-top{
 	display: flex;
     flex-direction: row;
+	flex-wrap: wrap;
 	width: -webkit-fill-available;
 	width: -moz-available;
     justify-content: space-evenly;
+	column-gap: 20px;
 }
 
 
@@ -885,7 +887,6 @@ section#footer ul {
 	#form {
 		margin-bottom: 50px;
 	}
-	
 }
 
 @media only screen and (max-width: 800px) {
@@ -899,4 +900,50 @@ section#footer ul {
 	}
 }
 
-@media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 690px) {
+	header {
+		display: none;
+	}
+	
+	#home .right-content img {
+		display: none;
+	}
+	
+	#about .right-content article {
+		width: 450px;
+	}
+	
+	#skills .left-content {
+		margin-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 611px) {
+	#skills .main-container {
+		flex-direction: column;
+	}
+	
+	#skills .left-content h2 {
+		font-size: 40px;
+		margin-top: 7px;
+		margin-left: 60px;
+	}
+	
+	#skills .left-content div div {
+		border-bottom: 3px solid var(--mainColor);
+		margin-top: 52px;
+		margin-left: 62px;
+	}
+	
+	#skills .left-content img {
+		width: 110px;
+	}
+	
+	#skills .right-content {
+		margin-top: 50px;
+	}
+	
+	#skills .right-content .skill-icons {
+		width: initial;
+	}
+}
